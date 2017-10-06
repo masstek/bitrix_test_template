@@ -40,7 +40,16 @@ IncludeTemplateLangFile(__FILE__);?>
 					<a href="/rss/" class="social-icon-small rss"></a>
 				</div>
 				<div class="col-md-8 footer-logo">
-					<a href="/"><img src="<?=SITE_TEMPLATE_PATH?>/images/footer-logo.png" alt="Whitesquare logo"></a>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "PATH" => SITE_TEMPLATE_PATH."/include/bottom-logo.php",
+                        "EDIT_TEMPLATE" => ""
+                    ),
+                false
+                );?>
 					<p>
 						Copyright © 2012 Whitesquare. A
 						<a href="http://pcklab.com">pcklab</a> creation

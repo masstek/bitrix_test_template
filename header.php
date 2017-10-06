@@ -40,31 +40,39 @@ IncludeTemplateLangFile(__FILE__);?>
 			</form>
     		<a href="/"><img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="Whitesquare logo"></a>
 		</header>
-		<nav class="navbar navbar-default">
-			<ul class="nav navbar-nav">
-				<li><a href="/home/">Home</a></li>
-				<li class="active"><a href="/about/">About us</a></li>
-				<li><a href="/services/">Services</a></li>
-				<li><a href="/partners/">Partners</a></li>
-				<li><a href="/customers/">Customers</a></li>
-				<li><a href="/projects/">Projects</a></li>
-				<li><a href="/careers/">Careers</a></li>
-				<li><a href="/contact/">Contact</a></li>
-			</ul>
-		</nav>
+		<?$APPLICATION->IncludeComponent("bitrix:menu", "top", Array(
+            "ROOT_MENU_TYPE" => "top",
+            "MENU_CACHE_TYPE" => "A",
+            "MENU_CACHE_TIME" => "3600",
+            "MENU_CACHE_USE_GROUPS" => "Y",
+            "MENU_CACHE_GET_VARS" => "",
+            "MAX_LEVEL" => "1",	
+            "CHILD_MENU_TYPE" => "left",	
+            "USE_EXT" => "N",	
+            "DELAY" => "N",	
+            "ALLOW_MULTI_SELECT" => "N",
+            ),
+            false
+        );?>
 		<div class="heading">
             <h1><?$APPLICATION->ShowTitle()?></h1>
 		</div>
 		<div class="row">
 			<aside class="col-md-7">
-				<ul class="list-group submenu">
-					<li class="list-group-item active">Lorem ipsum</li>
-					<li class="list-group-item"><a href="/donec/">Donec tincidunt laoreet</a></li>
-					<li class="list-group-item"><a href="/vestibulum/">Vestibulum elit</a></li>
-					<li class="list-group-item"><a href="/etiam/">Etiam pharetra</a></li>
-					<li class="list-group-item"><a href="/phasellus/">Phasellus placerat</a></li>
-					<li class="list-group-item"><a href="/cras/">Cras et nisi vitae odio</a></li>
-				</ul>
+            <?$APPLICATION->IncludeComponent("bitrix:menu", "left", Array(
+                "ROOT_MENU_TYPE" => "left",	
+                "MENU_CACHE_TYPE" => "A",	
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_USE_GROUPS" => "Y",	
+                "MENU_CACHE_GET_VARS" => "",
+                "MAX_LEVEL" => "1",	
+                "CHILD_MENU_TYPE" => "left",
+                "USE_EXT" => "N",
+                "DELAY" => "N",	
+                "ALLOW_MULTI_SELECT" => "N",
+                ),
+                false
+            );?>
 				<div class="panel panel-primary">
 					<div class="panel-heading">Our offices</div>
 					<div class="panel-body">

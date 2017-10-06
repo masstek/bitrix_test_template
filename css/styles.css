@@ -6553,7 +6553,7 @@ p {
   padding: 10px;
 }
 body {
-  background-image: url(../images/bg.png);
+  background: #fff;
   border-top: 5px solid #7e7e7e;
 }
 body .wrapper {
