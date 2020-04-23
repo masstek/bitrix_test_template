@@ -9,7 +9,7 @@ IncludeTemplateLangFile(__FILE__);?>
     <?$APPLICATION->ShowHead()?>
     <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/css/styles.css');
     $APPLICATION->SetAdditionalCSS('http://fonts.googleapis.com/css?family=Oswald:400,300');?>
-    <?$APPLICATION->ShowMeta("keywords")?>
+    <?$APPLICATION->ShowMeta("title")?>
     <?$APPLICATION->ShowMeta("description")?> 
 
   
